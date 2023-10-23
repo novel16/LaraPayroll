@@ -34,4 +34,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     //position routes
     Route::get('/positions',App\Livewire\Admin\Position\Index::class);
 
+    //Schedules routes
+    Route::get('/schedules',App\Livewire\Admin\Schedule\Index::class);
+
 });
