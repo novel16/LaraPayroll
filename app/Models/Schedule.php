@@ -15,4 +15,11 @@ class Schedule extends Model
     ];
 
     use HasFactory;
+
+
+    
+    public function Employees()
+    {
+        return $this->hasMany(Employee::class, 'position_id', 'id');
+    }
 }

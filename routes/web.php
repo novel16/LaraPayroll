@@ -37,4 +37,14 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     //Schedules routes
     Route::get('/schedules',App\Livewire\Admin\Schedule\Index::class);
 
+    //Employee Routes
+    Route::controller(App\Http\Controllers\Admin\EmployeeController::class)->group(function(){
+
+        Route::get('/employees', 'index');
+        Route::get('/employees/create', 'create');
+        Route::post('/employees', 'store');
+        Route::get('/employees/{employee}/edit', 'edit');
+        Route::put('/employees/{employee_id}', 'update');
+    });
+
 });

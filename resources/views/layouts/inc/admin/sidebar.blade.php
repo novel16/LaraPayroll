@@ -21,7 +21,7 @@
         </a>
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="{{url('admin/category/create-category')}}">Employee List</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{url('admin/employees')}}">Employee List</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{url('admin/category')}}">Overtime</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{url('admin/category')}}">Cash Advance</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{url('admin/schedules')}}">Schedules</a></li>
