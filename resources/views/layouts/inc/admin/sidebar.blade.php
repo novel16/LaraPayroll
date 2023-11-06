@@ -22,7 +22,7 @@
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{url('admin/employees')}}">Employee List</a></li>
-            <li class="nav-item"> <a class="nav-link" href="{{url('admin/category')}}">Overtime</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{url('admin/overtime')}}">Overtime</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{url('admin/category')}}">Cash Advance</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{url('admin/schedules')}}">Schedules</a></li>
           </ul>
@@ -48,7 +48,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pages/icons/mdi.html">
+        <a class="nav-link" href="{{ url('admin/employee-schedules') }}">
           <i class="mdi mdi-emoticon menu-icon"></i>
           <span class="menu-title">Schedule</span>
         </a>

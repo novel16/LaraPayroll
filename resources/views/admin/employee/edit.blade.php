@@ -131,6 +131,10 @@
                                 <div class="form-group">
                                     @if ($employee->image)
                                         <img src="{{ asset('uploads/employee/'.$employee->image) }}" style="width: 100px;height:100px; border-radius:50%;">
+                                    @else
+                                        <div class="text-danger">
+                                            No Image Added
+                                        </div>
                                     @endif
                                 </div>
 

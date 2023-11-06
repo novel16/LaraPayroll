@@ -47,4 +47,10 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
         Route::put('/employees/{employee_id}', 'update');
     });
 
+    //Schedules routes
+    Route::get('/employee-schedules',App\Livewire\Admin\EmployeeSchedule\Index::class);
+
+    //Overtime routes
+    Route::get('/overtime',App\Livewire\Admin\Overtime\Index::class);
+
 });

@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\EmployeeController;
 use App\Models\Employee;
 use App\Models\Position;
 use App\Models\Schedule;
+use Illuminate\Support\Facades\File;
 use Livewire\Component;
 
 class Index extends Component
@@ -27,7 +28,18 @@ class Index extends Component
 
     public function destroyEmployee()
     {
-        Employee::findOrFail($this->employee_id)->delete();
+       $employee = Employee::findOrFail($this->employee_id);
+
+       $path = 'uploads/employee/'.$employee->image;
+       if(File::exists($path)){
+
+           File::delete($path);
+
+       }
+
+       $employee->delete();
+       
+
         session()->flash('message', 'Employee deleted successfully');
         $this->dispatch('close-modal');
     }
